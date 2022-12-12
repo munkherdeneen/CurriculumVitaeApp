@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CurriculumVitaeApp</string>
+    <string name="fname">Munkh-Erdene Enkhtaivan</string>
+    <string name="title">DevOps Engineer</string>
+    <string name="string_edus">Education</string>
+    <string name="string_certs">Certification</string>
+    <string name="login_button">Login</string>
+    <string name="string_skills">Skills</string>
+    <string name="string_projects">Projects</string>
+    <string name="string_works">Works</string>
+</resources>
