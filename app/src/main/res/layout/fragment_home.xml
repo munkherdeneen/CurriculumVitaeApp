@@ -38,7 +38,6 @@
                         android:src="@drawable/pl" />
 
                 </androidx.cardview.widget.CardView>
-
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -68,20 +67,6 @@
                 android:paddingRight="24dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="32dp"/>
-
-            <Button
-                android:id="@+id/button_web"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="View Website" />
-
-            <Button
-                android:id="@+id/button_resume"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/Theme.Design.Light"
-                android:textColor="@color/design_default_color_primary_dark"
-                android:text="See Resume" />
         </LinearLayout>
     </ScrollView>
 </FrameLayout>
