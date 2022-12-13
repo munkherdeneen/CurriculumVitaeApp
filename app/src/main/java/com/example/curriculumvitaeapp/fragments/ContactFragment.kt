@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
+import com.example.curriculumvitaeapp.R
 import com.example.curriculumvitaeapp.common.Person
+import kotlinx.android.synthetic.main.fragment_contact.view.*
 
 class ContactFragment : Fragment() {
     private val KEY = "person"
@@ -38,7 +40,7 @@ class ContactFragment : Fragment() {
         var gmail = view.findViewById<LinearLayout>(R.id.gmail)
         gmail.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View?) {
-                val uriText = "mailto:${person.contact.emailAddressl}" +
+                val uriText = "mailto:${person.contact.emailAddress}" +
                         "?subject=" + Uri.encode("Hello From MDP Maharishi") +
                         "&body=" + Uri.encode("Hello ${person.firstName}!")
 
@@ -50,23 +52,24 @@ class ContactFragment : Fragment() {
             }
         })
 
-        var facebook = view.findViewById<LinearLayout>(R.id.facebook)
-        facebook.setOnClickListener(object : View.OnClickListener {
+        var linkedIn = view.findViewById<LinearLayout>(R.id.linkedIn)
+        linkedIn.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View?) {
                 try {
                     var intent =
-                        Intent(Intent.ACTION_VIEW, Uri.parse("fb://profile/${person.contact.facebook}"));
+                        Intent(Intent.ACTION_VIEW, Uri.parse("fb://profile/${person.contact.linkedIn}"));
                     startActivity(intent);
                 } catch (e: Exception) {
                     startActivity(
                         Intent(
                             Intent.ACTION_VIEW,
-                            Uri.parse("http://www.facebook.com/${person.contact.facebook}")
+                            Uri.parse("https://www.linkedin.com/in/${person.contact.linkedIn}")
                         )
                     );
                 }
             }
         })
+
         var twitter = view.findViewById<LinearLayout>(R.id.twitter)
         twitter.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View?) {
@@ -84,18 +87,19 @@ class ContactFragment : Fragment() {
                 }
             }
         })
-        var instagram = view.findViewById<LinearLayout>(R.id.instagram)
+
+        var instagram = view.findViewById<LinearLayout>(R.id.git)
         instagram.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View?) {
                 try {
                     var intent =
-                        Intent(Intent.ACTION_VIEW, Uri.parse("http://instagram.com/${person.contact.instagram}"));
+                        Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/${person.contact.github}"));
                     startActivity(intent);
                 } catch (e: Exception) {
                     startActivity(
                         Intent(
                             Intent.ACTION_VIEW,
-                            Uri.parse("http://instagram.com/${person.contact.instagram}")
+                            Uri.parse("https://github.com/${person.contact.github}")
                         )
                     );
                 }

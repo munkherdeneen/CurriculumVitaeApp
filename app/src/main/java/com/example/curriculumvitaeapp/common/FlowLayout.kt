@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.withStyledAttributes
 import androidx.core.view.children
+import com.example.curriculumvitaeapp.R
 
 class FlowLayout(context: Context, attributeSet: AttributeSet) : ViewGroup(context, attributeSet) {
 

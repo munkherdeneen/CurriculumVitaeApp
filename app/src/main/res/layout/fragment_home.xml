@@ -35,7 +35,7 @@
                         android:layout_height="180dp"
                         android:background="#fdfdcf"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/Munkh" />
+                        android:src="@drawable/pl" />
 
                 </androidx.cardview.widget.CardView>
 
